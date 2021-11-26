@@ -1,6 +1,7 @@
 <?php include("db.php"); ?>
 
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,6 +15,7 @@
 </head>
 
 <head>
+    <!DOCTYPE html>
     <meta charset="utf-8" />
     <title>Inicio de Sesión - Dinglis+</title>
     <link rel="icon" type="image/png" href="imagenes/icono.ico">
@@ -32,6 +34,11 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col">
+                <?php if (isset($_SESSION['message'])) { ?>
+                    <div class="alert alert-primary" role="alert">
+                    <strong><?= $_SESSION['message']?></strong>
+                    </div>
+                <?php session_unset(); } ?>
                     <h2 class="fw-bold text-center py-5">Bienvenido</h2>
 
                     <!--- LOGIN -->

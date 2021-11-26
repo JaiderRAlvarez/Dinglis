@@ -1,6 +1,7 @@
 <?php include("db.php");?>
 
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,6 +14,7 @@
 </head>
 
 <head>
+    <!DOCTYPE html>
     <meta charset="utf-8" />
     <title>Registro - Dinglis+</title>
     <link rel="icon" type="image/png" href="imagenes/icono.ico">

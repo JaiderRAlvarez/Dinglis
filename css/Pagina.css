@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 html, body {
     min-height: 100%;
     margin: 0;
@@ -53,7 +55,7 @@ section {
 }
 
 
-#imagenIngles {
+.imagen {
     width: 1000px;
     margin-left: -100;
 }
@@ -80,7 +82,7 @@ section {
     margin-top: 25px;
     margin-left: 25px;
     padding: 10px;
-    box-shadow:inset 0px 1px 0px 0px (255, 109, 109);
+    box-shadow:inset 0px 1px 0px 0px rgba(255, 109, 109);
 	border-radius: 5px;
 	display:inline-block;
 	cursor:pointer;
