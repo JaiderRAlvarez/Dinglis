@@ -1,29 +1,19 @@
 <?php include("db.php"); ?>
 
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <title>Inicio de sesión - Dinglis+</title>
-</head>
-
-<head>
-    <!DOCTYPE html>
-    <meta charset="utf-8" />
-    <title>Inicio de Sesión - Dinglis+</title>
     <link rel="icon" type="image/png" href="imagenes/icono.ico">
     <meta name="description" content="Dinglis+ es un juego de plataformas para aprender ingles hecho en la plataforma de Scratch" />
-    <meta name="author" content="JSJ Team" />
+    <meta name="author" content="JSJ Team"/>
     <meta name="keywords" content="Ingles, Dinglis+, Juego" />
-    <link rel="stylesheet" type="text/css" href="css/NavBarra.css" />
-    <link rel="stylesheet" type="text/css" href="css/Pagina.css">
-    <link rel="stylesheet" type="text/css" href="css/Login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 
 <body id="body">
@@ -38,7 +28,7 @@
                     <strong><?= $_SESSION['message']?></strong>
                     </div>
                 <?php session_unset(); } ?>
-                    <h2 class="fw-bold text-center py-5">Bienvenido</h2>
+                    <h2 class="fw-bold text-center py-5">Inicio de sesión</h2>
                     <form action="consultar.php" method="POST">
                         <div class="mb-4">
                             <label for="usuario" class="form-label">Usuario</label>
