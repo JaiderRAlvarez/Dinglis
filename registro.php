@@ -18,9 +18,9 @@
     <meta charset="utf-8" />
     <title>Registro - Dinglis+</title>
     <link rel="icon" type="image/png" href="imagenes/icono.ico">
-    <meta name="description" content="Dinglis es un juego de plataformas para aprender ingles hecho en la plataforma de Scratch" />
+    <meta name="description" content="Dinglis+ es un juego de plataformas para aprender ingles hecho en la plataforma de Scratch" />
     <meta name="author" content="JSJ Team" />
-    <meta name="keywords" content="Ingles, Dinglis, Juego" />
+    <meta name="keywords" content="Ingles, Dinglis+, Juego" />
 </head>
 
 <body id="body">
@@ -30,27 +30,32 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col">
+                    <?php if (isset($_SESSION['message'])) { ?>
+                        <div class="alert alert-primary" style="background-color: rgb(255, 109, 109); color: white;" role="alert">
+                        <strong><?= $_SESSION['message']?></strong>
+                        </div>
+                    <?php session_unset(); } ?>
                     <h2 class="fw-bold text-center py-5">Registro</h2>
                     <form action="guardar.php" method="POST">
                         <div class="mb-4">
                             <label for="usuario" class="form-label">Usuario</label>
-                            <input type="text" class="form-control" id="usuario " name="usuario">
+                            <input type="text" class="form-control" id="usuario " name="usuario" required>
                         </div>
                         <div class="mb-4">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre " name="nombre">
+                            <input type="text" class="form-control" id="nombre " name="nombre" required>
                         </div>
                         <div class="mb-4">
                             <label for="clave" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="clave " name="clave">
+                            <input type="password" class="form-control" id="clave " name="clave" required>
                         </div>
                         <div class="mb-4">
                             <label for="email" class="form-label">Email</label>
-                            <input type="text" class="form-control" id="email " name="email">
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="mb-4">
                             <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
-                            <input class="form-control" id="fechaNacimiento" name="fechaNacimiento" type="date" size="30"><br><br>
+                            <input class="form-control" id="fechaNacimiento" name="fechaNacimiento" type="date" size="30" required><br><br>
                         </div>
 
                         <div class="d-grid">

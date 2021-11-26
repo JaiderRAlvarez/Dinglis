@@ -1,20 +1,27 @@
 <?php
+include ('db.php');
 
- include('db.php');
+if (isset($_POST['Registro']))
+{
+   $usuario = $_POST['usuario'];
+   $nombre = $_POST['nombre'];
+   $clave = $_POST['clave'];
+   $email = $_POST['email'];
+   $fecha = $_POST['fechaNacimiento'];
 
-
- if(isset($_POST['Registro'])) {
-    $usuario = $_POST['usuario'];
-    $nombre = $_POST['nombre'];
-    $clave = $_POST['clave'];
-    $email = $_POST['email'];
-    $fecha =$_POST ['fechaNacimiento'];
-
-    $query = "INSERT INTO registro values('$usuario','$nombre','$clave','$email','$fecha')";
-    $result = mysqli_query($conn, $query);
-    if(!$result){alert ("There was an issue with the form");
+   $query = "INSERT INTO registro values('$usuario','$nombre','$clave','$email','$fecha')";
+   $result = mysqli_query($conn, $query);
+   if (!$result)
+   {
+      $_SESSION['message'] = 'Error: No se registró';
+      header('Location: registro.php');
    }
-    echo'guardar ';
-    header('Location:index.php');
- }
-    ?>
+   else
+   {
+      $_SESSION['message'] = 'Se ha registrado con éxito.';
+      header('Location: index.php');
+   }
+
+}
+
+?>
