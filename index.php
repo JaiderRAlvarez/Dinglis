@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="my-3">
-                            <span>No tienes cuenta <a href="registro.php">Registrate</a></span><br>
+                            <span>¿No tienes cuenta? <a href="registro.php">Registrate</a></span><br>
                         </div>
                     </form>
                 </div>

@@ -12,9 +12,8 @@
 
     $query = "INSERT INTO registro values('$usuario','$nombre','$clave','$email','$fecha')";
     $result = mysqli_query($conn, $query);
-    if(!$result) {
-        die ("query failed");
-    }
+    if(!$result){alert ("There was an issue with the form");
+   }
     echo'guardar ';
     header('Location:index.php');
  }
