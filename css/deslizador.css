@@ -1,14 +1,19 @@
 @charset "utf-8";
 
 .deslizador {
+	border-radius: 5px;
+	margin: 50;
+	float: right;
 	width: 800px;
 	height: 600px;
-	margin: auto;
     overflow: hidden;
-    border: solid rgba(182, 0, 0, 0.315) 5px;
+    border: solid rgb(255, 109, 109) 5px;
+	z-index: -1;
 }
 
 .deslizador ul {
+	border-radius: 5px;
+
 	display: flex;
 	padding: 0;
 	width: 400%;
@@ -16,6 +21,8 @@
 }
 
 .deslizador li {
+	border-radius: 5px;
+
 	width: 100%;
 	list-style: none;
 }

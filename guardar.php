@@ -1,17 +1,21 @@
-<?php include('registro.php');
+<?php
 
-if (isset($_POST['guardar'])) {
-    $Usuario = $_POST['usuario'];
-    $Nombre = $_POST['nombre'];
-    $Clave = $_POST['clave'];
-    $Email = $_POST['email'];
-    $FechaNacimiento = $_POST['fechanacimiento'];
+ include('db.php');
 
-    $query = "INSERT INTO Registro VALUES ('$Usuario','$Nombre','$Clave','$Email','$FechaNacimiento')";
-    $result =  mysqli_query($conn, $query);
-    if(!result){
-        die("Query Failed.");
+
+ if(isset($_POST['Registro'])) {
+    $usuario = $_POST['usuario'];
+    $nombre = $_POST['nombre'];
+    $clave = $_POST['clave'];
+    $email = $_POST['email'];
+    $fecha =$_POST ['fechaNacimiento'];
+
+    $query = "INSERT INTO registro values('$usuario','$nombre','$clave','$email','$fecha')";
+    $result = mysqli_query($conn, $query);
+    if(!$result) {
+        die ("query failed");
     }
-    header('Location: registro.php');
-}
-?>
+    echo'guardar ';
+    header('Location:index.php');
+ }
+    ?>
