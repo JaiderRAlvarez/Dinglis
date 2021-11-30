@@ -9,7 +9,7 @@ if (isset($_POST['Registro']))
    $email = $_POST['email'];
    $fecha = $_POST['fechaNacimiento'];
 
-   $query = "INSERT INTO registro values('$usuario','$nombre','$clave','$email','$fecha')";
+   $query = "INSERT INTO registro(Usuario, Nombre, Clave, Email, Fecha_Nacimiento) values('$usuario','$nombre','$clave','$email','$fecha')";
    $result = mysqli_query($conn, $query);
    if (!$result)
    {
@@ -19,6 +19,7 @@ if (isset($_POST['Registro']))
    else
    {
       $_SESSION['message'] = 'Se ha registrado con éxito.';
+      $_SESSION['usuario'] = $usuario;
       header('Location: index.php');
    }
 

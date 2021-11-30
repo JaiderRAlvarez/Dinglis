@@ -1,12 +1,19 @@
+<?php
+session_start();
+  
+if (!isset($_SESSION['usuario'])) {
+    $_SESSION['message'] = "Error: Tienes que iniciar sesión";
+    header('location: index.php');
+}
+?>
+<!DOCTYPE php>
 <html lang="en">
 
-
 <head>
-    <!DOCTYPE html>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tips - Dinglis+</title>
+    <title>Contacto - Dinglis+</title>
     <link rel="icon" type="image/x-icon" href="imagenes/icono.ico">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/pagina.css">
@@ -35,16 +42,16 @@
                 <li class="dropdown" style="float: right;">
                     <a class="dropbtn hover-underline-animation" style="margin-right: 0;" href="">Perfil</a>
                     <div class="dropdown-content">
-                        <a class="hover-underline-animation" style="margin-right: 0px;" href="">Estadisticas</a>
-                        <a class="hover-underline-animation" style="margin-right: 0px;" href="index.php">Cerrar sesión</a>
+                        <a class="hover-underline-animation" style="margin-right: 0px;" href="index.php">Estadisticas</a>
+                        <a class="hover-underline-animation" style="margin-right: 0px;" href="inicio.php?logout='1'">Cerrar sesión</a>
                     </div>
                 </li>
-                <li><a class="hover-underline-animation" href="contacto.html">Contacto</a></li>
-                <li><a class="hover-underline-animation" href="herramientas.html">Herramientas</a></li>
-                <li><a class="hover-underline-animation" href="quiz.html">Quiz</a></li>
-                <li><a class="hover-underline-animation" href="jugar.html">Jugar</a></li>                 
-                <li style="margin-top: 10;"><a style="margin-right: 40px;" class="actual" href="tips.html">Tips</a></li>
-                <li><a class="hover-underline-animation" style="margin-right: 40px;" href="inicio.html">Inicio</a></li>
+                <li style="margin-top: 10;"><a style="margin-right: 40px;" class="actual" href="contacto.php">Contacto</a></li>
+                <li><a class="hover-underline-animation" style="margin-right: 40px;" href="herramientas.php">Herramientas</a></li>
+                <li><a class="hover-underline-animation" href="calificanos.php">Calificanos</a></li>
+                <li><a class="hover-underline-animation" href="jugar.php">Jugar</a></li>
+                 <li><a class="hover-underline-animation" href="tips.php">Tips</a></li>
+                <li><a class="hover-underline-animation" href="inicio.php">Inicio</a></li>
 
             </ul>
         </div>
@@ -55,9 +62,9 @@
         <div>
             <section style="height: 77%;">
 
-                <div id="patron1" style="width: 400px;height: 150px;">
+                <div id="patron1" style="width: 700px;height: 150px;">
                     <p class="titulo" style="margin-top: 0px; margin-bottom: 0px;">
-                        TIPS&nbsp;
+                        Contacto&nbsp;
                     </p>
                 </div>
 
@@ -66,31 +73,35 @@
                     <p id="parrafo">
 
 
-                         - Ve películas y series. Este consejo te permite pasar un rato de ocio mientras estudias inglés. Además, te ayuda a conocer expresiones típicas.<br><br>
-                        - Escucha música. Las letras de canciones te dan acceso a la sonoridad de las palabras, acentos y te ayudan a aprender como pronunciar el inglés de manera correcta.<br><br>
 
-                        - Lee libros. Ya sea ficción o no ficción, leer libros en inglés, desde historietas a los clásicos de la literatura inglesa, adquirirás vocabulario y gramática. <br><br>
+
+                        Acá está la información para contactar a los creadores de Dinglis+<br><br>
+
+                        Javier Cantillo de la Asunción - javiercantillodelaasuncion@pascualbravo.edu.co<br><br>
+                        Stiven Javier Guzmán Otero - stivenjavierguzmanotero@pascualbravo.edu.co<br><br>
+                        Jaider Rojas Alvarez - jaiderrojasalvarez@pascualbravo.edu.co<br><br>
+                        Omar Yesid García Guzmán - omaryesidgarciaguzman@pascualbravo.edu.co
 
                     </p>
                 </div>
             </section>
 
             <section style="height: 77%;">
-                <img style="width: 700px; height: 700px; margin-top: 10%; margin-left: 10%;" class="imagen" alt="Tips de Inglés" src="imagenes/ingles-cuna-blog.jpg">
+                <img style="width: 700px; height: 700px; margin-top: 10%; margin-left: 10%;" class="imagen" src="imagenes/email.png">
             </section>
         </div>
     </div>
 
-<footer>
-        <div id="info-footer">
-            <p>Dinglis+ © 2021</p>
-        </div>
-    
-        <div id="paginas-footer">
-            <p style="display: inline-block; margin-right: 10%; margin-left: 25%;">Institución Universitaria Pascual Bravo</p>
-            <p style="display: inline-block;">Institución Educativa Hectór Abad Gómez</p>
-        </div>
-    </footer>
 </body>
+<footer>
+    <div id="info-footer">
+        <p>Dinglis+ © 2021</p>
+    </div>
+
+    <div id="paginas-footer">
+        <p style="display: inline-block; margin-right: 10%; margin-left: 25%;">Institución Universitaria Pascual Bravo</p>
+        <p style="display: inline-block;">Institución Educativa Hectór Abad Gómez</p>
+    </div>
+</footer>
 
 </html>
