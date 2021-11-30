@@ -21,7 +21,7 @@ Institución Universitaria Pascual Bravo
 CREATE DATABASE proyecto;
 CREATE TABLE registro(
 	ID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	Usuario varcVARCHARhar(20) NOT NULL UNIQUE,
+	Usuario VARCHAR(20) NOT NULL UNIQUE,
 	Nombre VARCHAR(30) NOT NULL,
 	Clave VARCHAR(100) NOT NULL,
 	Email VARCHAR(100) NOT NULL,
