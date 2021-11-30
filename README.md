@@ -15,7 +15,10 @@ Institución Universitaria Pascual Bravo
 
 Base de datos
 
-''' CREATE DATABASE proyecto;
+
+
+```mysql
+CREATE DATABASE proyecto;
 CREATE TABLE registro(
 	ID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	Usuario varcVARCHARhar(20) NOT NULL UNIQUE,
@@ -32,4 +35,5 @@ CREATE TABLE calificacion(
 	FOREIGN KEY (Usuario) REFERENCES registro(Usuario),
 	Calificacion INT(2) NOT NULL,
 	Fecha DATETIME DEFAULT CURRENT_TIMESTAMP
-); '''
+);
+```
