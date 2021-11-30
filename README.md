@@ -9,7 +9,7 @@ Integrantes
 
 Grado: 11°1 Media Técnica Desarrollo de Software
 
-Institución Educativa Héctor Abad Gómez
+Institución Educativa Héctor Abad Gómez -
 Institución Universitaria Pascual Bravo
 
 
